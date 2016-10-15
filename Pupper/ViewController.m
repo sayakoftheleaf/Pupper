@@ -69,7 +69,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
         if (twit == true){
             UIAlertController *alertController = [UIAlertController
                                                   alertControllerWithTitle:@"Uh..."
-                                                  message:@"No you didn't, you twit."
+                                                  message:@"Try logging in again...?"
                                                   preferredStyle:UIAlertControllerStyleAlert];
                    //  add buttons
                 UIAlertAction *cancelAction = [UIAlertAction

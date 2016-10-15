@@ -33,10 +33,10 @@ float swipeSpeed = .25f;
     /* Populate array here */
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"ALLTHEINFO$"];
     s = [[Sockpuppet alloc] init];
-    [s setup:@"http://10.244.140.122" port:5558];
+    [s setup:@"http://10.244.140.122" port:5559];
     
-    
-    
+    //10.244.140.122
+    //5558
     UIImageView *cenL = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"final logo.png"]];
     cenL.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.navigationItem.titleView = cenL;
@@ -46,7 +46,7 @@ float swipeSpeed = .25f;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mail-icon.png"] style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mail-icon.png"] style:UIBarButtonItemStyleDone target:self action:@selector(nope)];
     
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
     
@@ -91,6 +91,33 @@ float swipeSpeed = .25f;
     [s writeOut:[NSString stringWithFormat:@"%d\n", human]];
     [super viewDidLoad];
 
+}
+
+-(void)nope{
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Sorry!"
+                                          message:@"Due to time constraints, messaging has not been implemented.  Check back later!"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    //  add buttons
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       
+                                   }];
+    
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   
+                               }];
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    [self presentViewController: alertController animated:YES completion:nil];
 }
 
 

@@ -49,7 +49,7 @@
 		F4F482061DB2895000B93BA5 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F482011DB2895000B93BA5 /* 8.png */; };
 		F4F482071DB2895000B93BA5 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F482021DB2895000B93BA5 /* 9.png */; };
 		F4F4820A1DB28ABF00B93BA5 /* final logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F482081DB28ABF00B93BA5 /* final logo.png */; };
-		F4F4820B1DB28ABF00B93BA5 /* logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F482091DB28ABF00B93BA5 /* logo small.png */; };
+		F4F4820B1DB28ABF00B93BA5 /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F482091DB28ABF00B93BA5 /* logosmall.png */; };
 		F4F4820D1DB28E0400B93BA5 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F4820C1DB28E0400B93BA5 /* 10.png */; };
 		F4F4820F1DB28E9100B93BA5 /* usr.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F4820E1DB28E9100B93BA5 /* usr.png */; };
 		F4F482111DB2905E00B93BA5 /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F482101DB2905E00B93BA5 /* walker.png */; };
@@ -128,7 +128,7 @@
 		F4F482011DB2895000B93BA5 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		F4F482021DB2895000B93BA5 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		F4F482081DB28ABF00B93BA5 /* final logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "final logo.png"; sourceTree = "<group>"; };
-		F4F482091DB28ABF00B93BA5 /* logo small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo small.png"; sourceTree = "<group>"; };
+		F4F482091DB28ABF00B93BA5 /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosmall.png; sourceTree = "<group>"; };
 		F4F4820C1DB28E0400B93BA5 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		F4F4820E1DB28E9100B93BA5 /* usr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usr.png; sourceTree = "<group>"; };
 		F4F482101DB2905E00B93BA5 /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				F4F4820E1DB28E9100B93BA5 /* usr.png */,
 				F4F4820C1DB28E0400B93BA5 /* 10.png */,
 				F4F482081DB28ABF00B93BA5 /* final logo.png */,
-				F4F482091DB28ABF00B93BA5 /* logo small.png */,
+				F4F482091DB28ABF00B93BA5 /* logosmall.png */,
 				F4F481FE1DB2895000B93BA5 /* 5.png */,
 				F4F481FF1DB2895000B93BA5 /* 6.png */,
 				F4F482001DB2895000B93BA5 /* 7.png */,
@@ -401,7 +401,7 @@
 				F44D0CE91DB1B65E001B70B8 /* Tinder.png in Resources */,
 				F44D0CFA1DB1C9D2001B70B8 /* ViewController.xib in Resources */,
 				F4F482041DB2895000B93BA5 /* 6.png in Resources */,
-				F4F4820B1DB28ABF00B93BA5 /* logo small.png in Resources */,
+				F4F4820B1DB28ABF00B93BA5 /* logosmall.png in Resources */,
 				F4F481EF1DB268BB00B93BA5 /* solid_info.png in Resources */,
 				F4F481C91DB1FC8F00B93BA5 /* dog_PNG2418.png in Resources */,
 				F4F482111DB2905E00B93BA5 /* walker.png in Resources */,

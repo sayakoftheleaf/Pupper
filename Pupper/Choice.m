@@ -36,7 +36,7 @@ ProfilePage *aController;
     [human setBackgroundImage:[UIImage imageNamed:@"walker.png"] forState:UIControlStateNormal];
    // [human setTitle:@"Human" forState:UIControlStateNormal];
     [doggo setBackgroundImage:[UIImage imageNamed:@"noun_364.png"] forState:UIControlStateNormal];
-   // [doggo setTitle:@"Pet" forState:UIControlStateNormal];
+    [doggo setTag:13];
     
     //[human setBackgroundColor:[UIColor blueColor]];
     //[doggo setBackgroundColor:[UIColor blueColor]];
@@ -77,7 +77,7 @@ ProfilePage *aController;
 -(void)buttonPressed:(id)sender{
     NewUser* aController=[[NewUser alloc] initWithNibName:@"NewUser" bundle:nil];
     UIButton *b = (UIButton*)sender;
-    if ([b.currentTitle isEqual:@"Pet"]){
+    if (b.tag == 13){
         aController.human = 1;
     }	
     else{
