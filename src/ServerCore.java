@@ -6,6 +6,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Date;
+import org.json.*;
+import org.json.simple.JSONObject;
 
 public class ServerCore {
 	public static void main(String[] args){
@@ -95,11 +97,15 @@ public class ServerCore {
 				System.out.println("Caught exception. Thread failure.");
 			}
 		}
-		public User makePet(){
-			Pet pet = new Pet();
-			pet.id = currentID;
-			return pet;
+		public JSONObject makePet(Pet p){
+			JSONObject obj = new JSONObject();
+			obj.put("name", p.name);
+			
+			
+			return obj;
 		}
+		
+		
 	
 }
 }
