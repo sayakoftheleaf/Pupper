@@ -20,7 +20,7 @@ public class ServerCore {
 	
 	public ServerCore(){
 		try {
-			ServerSocket sSocket = new ServerSocket(1339);
+			ServerSocket sSocket = new ServerSocket(5558);
 			System.out.println("Server started at: " + new Date());
 
 
@@ -66,8 +66,10 @@ public class ServerCore {
 				System.out.println("NEW CLIENT");
 				
 				//Tell the client that they've connected to the server
-				output.println("You have connected at: " + new Date() +"\n");
-				output.flush();
+				//output.println("You have connected at: " + new Date() +"\n");
+				//output.flush();
+				
+				
 				boolean running = true;
 				
 				// main while loop
@@ -79,28 +81,83 @@ public class ServerCore {
 					
 					
 					
+					if (Integer.parseInt(resultString) == 0){
+						Pet p = new Pet();
+						ArrayList<Pet> pets = p.makePets();
+						
+						for (int i = 0; i < pets.size(); i++){
+							Pet p1 = pets.get(i);
+							output.println(makePet(p1) + "\n");
+							output.flush();
+							
+							Thread.sleep(5);
+						}
+					}
+					else if (Integer.parseInt(resultString) == 1){
+						Human h = new Human();
+						ArrayList<Human> humans = h.makeHumans();
+						
+						for (int i = 0; i < humans.size(); i++){
+							Human p1 = humans.get(i);
+							output.println(makeHuman(p1) + "\n");
+							output.flush();
+							
+							Thread.sleep(5);
+						}
+						
+					}
+					
 					System.out.print("Echo: ");
 					System.out.print(resultString + "\n");
 //					output.println(">> " + resultString + "\n");
 					
-					output.println(resultString + "\n");
-					output.flush();
-					try {
-						Thread.sleep(5);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+					//output.println(resultString + "\n");
+					//output.flush();
+					
 				}
 				
 			}
 			catch(IOException exception) {
 				System.out.println("Caught exception. Thread failure.");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 		public JSONObject makePet(Pet p){
 			JSONObject obj = new JSONObject();
+			obj.put("id", Integer.toString(p.id));
+			obj.put("facebookID", Integer.toString((int)p.facebookID));
 			obj.put("name", p.name);
+			obj.put("type", p.type);
+			obj.put("description", p.description);
+			obj.put("age", Integer.toString(p.age));
+			obj.put("walking", p.walking);
+			obj.put("sitting", p.sitting);
+			obj.put("w_frequency", p.w_frequency);
+			obj.put("s_when", p.s_when.toString());
+			obj.put("matches", p.matches.toString());
+			obj.put("added_on", p.added_on.toString());
+			obj.put("updated_on", p.updated_on.toString());
+			obj.put("lat", p.lat);
+			obj.put("lon", p.lon);
 			
+			return obj;
+		}
+		public JSONObject makeHuman(Human p){
+			JSONObject obj = new JSONObject();
+			obj.put("id", Integer.toString(p.id));
+			obj.put("facebookID", Integer.toString((int)p.facebookID));
+			obj.put("name", p.name);
+			obj.put("experience", p.experience);
+			obj.put("description", p.description);
+			obj.put("age", Integer.toString(p.age));
+			obj.put("work_preference", p.work_preference);
+			obj.put("matches", p.matches.toString());
+			obj.put("added_on", p.added_on.toString());
+			obj.put("updated_on", p.updated_on.toString());
+			obj.put("lat", p.lat);
+			obj.put("lon", p.lon);
 			
 			return obj;
 		}

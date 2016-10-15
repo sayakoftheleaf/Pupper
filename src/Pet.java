@@ -37,7 +37,7 @@ public class Pet extends User{
 		p.age = 5;
 		p.walking = true;
 		p.sitting = false;
-		p.w_frequency = "Twice a week.";
+		p.w_frequency = "2 / Week";
 		p.s_when = "5PM";
 		
 		Pet p1 = new Pet();
@@ -65,7 +65,7 @@ public class Pet extends User{
 		p2.s_when = "6PM";
 		
 		Pet p3 = new Pet();
-		p3.id = 4;
+		p3.id = 3;
 		p3.facebookID = 0;
 		p3.name = "Sparky";
 		p3.type = "Dog";
@@ -73,14 +73,28 @@ public class Pet extends User{
 		p3.age = 3;
 		p3.walking = true;
 		p3.sitting = false;
-		p3.w_frequency = "Three time a week.";
+		p3.w_frequency = "3 / Week";
 		p3.s_when = "5PM";
 		p3.matches.add(4);
 		
-		pets.add(p);
-		pets.add(p1);
-		pets.add(p2);
+		Pet p4 = new Pet();
+		p4.id = 4;
+		p4.facebookID = 0;
+		p4.name = "Ronaldo";
+		p4.type = "Ferret";
+		p4.description = "Ferretz rule.";
+		p4.age = 7;
+		p4.walking = false;
+		p4.sitting = true;
+		p4.w_frequency = "Every day.";
+		p4.s_when = "3PM";
+		p4.matches.add(4);
+		
+		pets.add(p4);
 		pets.add(p3);
+		pets.add(p2);
+		pets.add(p1);
+		pets.add(p);
 		
 		
 		

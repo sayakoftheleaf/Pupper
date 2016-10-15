@@ -46,7 +46,7 @@ public class ClientTest extends JFrame
         setVisible(true);
          
         try {
-            Socket socket = new Socket("localhost",50001);
+            Socket socket = new Socket("localhost",1339);
             output = new PrintWriter(socket.getOutputStream(), true);
             input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             
