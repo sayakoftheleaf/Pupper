@@ -36,6 +36,8 @@ public class ServerCore {
 		}
 		
 	}
+	
+	/* A client thread that is created by the server for each user that connects */
 	class ClientThread implements Runnable
 	{
 		Socket threadSocket;
@@ -47,26 +49,32 @@ public class ServerCore {
 			threadSocket = socket;
 			
 		}
-
+		
+		/* the runner for each client thread */
 		public void run()
 		{
 			try {
 				PrintWriter output = new PrintWriter(threadSocket.getOutputStream(), true);
 				BufferedReader input = new BufferedReader(new InputStreamReader(threadSocket.getInputStream()));
 
-				//Tell the client that he/she has connected
+				//Tell the client that they've connected to the server
 				output.println("You have connected at: " + new Date() +"\n");
 				output.flush();
 				boolean running = true;
 				
+				// main while loop
 				while (running == true){
+					String chatInput = input.readLine();
+					String resultString = chatInput;
 					
+					System.out.print("Echo: ");
+					System.out.println(resultString);
 					
 				}
 				
 			}
 			catch(IOException exception) {
-
+				System.out.println("Caught exception. Thread failure.");
 			}
 		}
 	
